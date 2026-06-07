@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lynnwood | Luxury Furniture & Bespoke Landscape Design Egypt</title>
+    <meta name="description" content="Discover Lynnwood's exclusive collections of luxury indoor & outdoor furniture, bespoke fountains, and premium landscape designs in Egypt. Elevate your living space with elite craftsmanship.">
+    <meta name="keywords" content="Luxury Furniture Egypt, Bespoke Landscape Design, Outdoor Furniture Cairo, Custom Fountains, Interior Design Egypt, Premium Home Decor, Lynnwood Furniture">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <style>
+        /* CSS Variables for Luxury Palette */
+        :root {
+            --primary-color: #3d4a3e; /* Deep Olive */
+            --secondary-color: #c5a059; /* Muted Gold */
+            --accent-color: #a67c52; /* Copper/Bronze */
+            --text-dark: #2c3e50;
+            --text-light: #f1f2f6;
+            --bg-light: #fafafa;
+            --white: #ffffff;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Playfair Display', serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        /* Header Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: var(--white) !important;
+            padding: 12px 25px;
+            border-radius: 2px;
+            font-weight: 600 !important;
+            box-shadow: 0 4px 15px rgba(61, 74, 62, 0.2);
+        }
+
+        .cta-btn:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 64px;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--secondary-color);
+            margin-bottom: 35px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            max-width: 750px;
+            margin: 0 auto 50px auto;
+            color: var(--text-light);
+            font-weight: 300;
+        }
+
+        .btn-main {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 15px 40px;
+            font-weight: 600;
+            border-radius: 2px;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
+            box-shadow: 0 10px 25px rgba(197, 160, 89, 0.3);
+        }
+
+        .btn-main:hover {
+            background-color: var(--primary-color);
+            transform: scale(1.05);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 120px 20px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            font-size: 42px;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        .about-section p {
+            font-size: 18px;
+            color: #555;
+            line-height: 2;
+        }
+
+        .about-section p strong {
+            color: var(--accent-color);
+        }
+
+        /* Catalog Section */
+        .catalog-container {
+            max-width: 1200px;
+            margin: 0 auto 120px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 80px;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.03);
+            transition: var(--transition);
+            border: 1px solid #f0f0f0;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.1);
+        }
+
+        .img-container {
+            position: relative;
+            height: 320px;
+            overflow: hidden;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .product-card:hover .img-container img {
+            transform: scale(1.1);
+        }
+
+        .badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 6px 15px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card-details {
+            padding: 35px;
+        }
+
+        .card-details h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .card-details p {
+            font-size: 15px;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .view-gallery-btn {
+            color: var(--secondary-color);
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Gallery Popup Improvements */
+        .gallery-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.98);
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .gallery-popup.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .popup-wrapper {
+            width: 90%;
+            max-width: 1200px;
+            position: relative;
+        }
+
+        .close-popup {
+            position: absolute;
+            top: -60px;
+            right: 0;
+            color: var(--white);
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        .popup-title {
+            color: var(--secondary-color);
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .slides-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-height: 70vh;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .slides-container img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border: 2px solid transparent;
+            transition: var(--transition);
+        }
+
+        .slides-container img:hover {
+            border-color: var(--secondary-color);
+            transform: scale(1.02);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: var(--white);
+            padding: 100px 20px 50px 20px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 60px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 60px;
+        }
+
+        .footer-brand h2 {
+            font-size: 36px;
+            color: var(--secondary-color);
+            margin-bottom: 25px;
+        }
+
+        .footer-contact h3, .footer-social h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+        }
+
+        .footer-contact p {
+            color: #aaa;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .footer-contact i {
+            color: var(--secondary-color);
+            margin-right: 10px;
+        }
+
+        .social-media-row {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .sm-icon {
+            width: 45px;
+            height: 45px;
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .sm-icon:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        .wa-inline-btn {
+            background-color: #25d366;
+            padding: 12px 25px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        .catalog-inline-btn {
+            background-color: var(--secondary-color);
+            padding: 12px 25px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-transform: uppercase;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 42px; }
+            .hero-subtitle { font-size: 16px; letter-spacing: 2px; }
+            .nav-links { display: none; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">Lynnwood</div>
+            <ul class="nav-links">
+                <li><a href="#about">Philosophy</a></li>
+                <li><a href="#catalog">Collections</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://wa.me/201040567124" target="_blank" class="cta-btn">Consultation</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Artistry in Every Detail</h1>
+            <div class="hero-subtitle">Elite Furniture & Landscape Architecture</div>
+            <p>Transforming living spaces into serene sanctuaries through master craftsmanship, sustainable luxury materials, and innovative design concepts.</p>
+            <a href="tel:01040567124" class="btn-main"><i class="fa-solid fa-phone"></i> Book a Consultation</a>
+        </div>
+    </section>
+
+    <section class="about-section" id="about" data-aos="fade-up">
+        <h2>The Lynnwood Legacy</h2>
+        <p>At <strong>Lynnwood</strong>, we believe that true luxury lies in the harmony between nature and craftsmanship. Our mission is to curate <strong>bespoke indoor furniture</strong> and <strong>architectural landscape solutions</strong> that reflect your unique personality. From hand-carved sofa sets to tranquil water features, we bring <strong>elite aesthetics</strong> and sustainable elegance to the most sophisticated homes in Egypt.</p>
+    </section>
+
+    <section class="catalog-container" id="catalog">
+        <h2 class="section-title" data-aos="fade-down">Curated Collections</h2>
+        <p class="section-subtitle" data-aos="fade-down">Explore our portfolio of premium furniture and landscape masterworks</p>
+        
+        <div class="grid">
+            <!-- Living Room -->
+            <div class="product-card" data-aos="zoom-in" onclick="openGallery('Living Room Collection', ['https://lh3.googleusercontent.com/u/0/d/1y1c0x_geu9UVZEvlq-ormYOfPfOz_5SU', 'https://lh3.googleusercontent.com/u/0/d/1ZOO86B98nEjdT4q4cQe8vwdVTXHa2S83', 'https://lh3.googleusercontent.com/u/0/d/1XDUCapIT7-8BCWSs03mXNLtaHMvcHKwO', 'https://lh3.googleusercontent.com/u/0/d/1Y2Z5W4ZmNi3pe-WL4_PjgBy3CHODAUe7', 'https://lh3.googleusercontent.com/u/0/d/1Ai9IVrm6vG8Duc0bn26C7tle7nmiySaQ', 'https://lh3.googleusercontent.com/u/0/d/1dEa_hGaVbs-_Dod7pyvLsUT4o_LyAioj', 'https://lh3.googleusercontent.com/u/0/d/1Mc2UVwhh69Xnx4gP91k00QQevUD4g1QD', 'https://lh3.googleusercontent.com/u/0/d/1bYZhk4paiaoYIvCpKh0ZWQM_i_zaPQTN', 'https://lh3.googleusercontent.com/u/0/d/11YHGO415pW88p6r_lgXH3G4ISCVAtwav', 'https://lh3.googleusercontent.com/u/0/d/1wGr4KYTG94gRsf1LiQja9xUji3pE3-cX', 'https://lh3.googleusercontent.com/u/0/d/1fjVu7RZpF0awugpq-5fmXu-sRmCl1wGS', 'https://lh3.googleusercontent.com/u/0/d/18Orixj0JKdIYkdGtEzQ-tv7M0NLF1yz_', 'https://lh3.googleusercontent.com/u/0/d/16FuoBUwHpUGSxynMQuIqoh2ZqSpQkA4I', 'https://lh3.googleusercontent.com/u/0/d/1FCoK8diUJEv7vc572xlGdXOwu4oK88Io', 'https://lh3.googleusercontent.com/u/0/d/1nzbTr36N7ndPCSnrNRnU8xOLbhpbTloR', 'https://lh3.googleusercontent.com/u/0/d/1nGunS4HV5UKN_BSn-Vl1-Xj6M0pDqrGj', 'https://lh3.googleusercontent.com/u/0/d/1uwjGVNIwicOvcJPtgxde7N9EF94Iq2Du', 'https://lh3.googleusercontent.com/u/0/d/16LFdCmuBb4DMoWX0ZRTTAfxvE7JfnLrW', 'https://lh3.googleusercontent.com/u/0/d/17V4yZ3GOogm8PgZShEgxB3I09eh4kihf', 'https://lh3.googleusercontent.com/u/0/d/1xiNylt8vDaOirQSYobOJluytyN96SU-h', 'https://lh3.googleusercontent.com/u/0/d/1u_yJPl4kIkvUgufvwVH4wrlxlY_7ecJV', 'https://lh3.googleusercontent.com/u/0/d/1AU4U3HFROz3Iv5piV01iVjJdMGko5AMu', 'https://lh3.googleusercontent.com/u/0/d/1jIEWSg_1qkYA6c4O6s5Sns9oEsoySnBA', 'https://lh3.googleusercontent.com/u/0/d/1pfx3hHXSrKLqrI5ynlpLFsfwMmsdJe6G'])">
+                <div class="img-container">
+                    <span class="badge">24 Masterpieces</span>
+                    <img src="https://lh3.googleusercontent.com/u/0/d/1y1c0x_geu9UVZEvlq-ormYOfPfOz_5SU" alt="Living Room">
+                </div>
+                <div class="card-details">
+                    <h3>Living Room</h3>
+                    <p>Contemporary sofa configurations and bespoke interior pieces balancing minimalist quiet luxury with ultimate home comfort.</p>
+                    <span class="view-gallery-btn">View Portfolio →</span>
+                </div>
+            </div>
+
+            <!-- Dining Room -->
+            <div class="product-card" data-aos="zoom-in" data-aos-delay="100" onclick="openGallery('Dining Room Collection', ['https://lh3.googleusercontent.com/u/0/d/1FD9aWVnpfHrmqt179CgSeMxryJyWGv0e', 'https://lh3.googleusercontent.com/u/0/d/1bSq_TcQWw_UxsTog9L4U0goHquIhvdhR', 'https://lh3.googleusercontent.com/u/0/d/1crFbfOO-aTQYvgpiblxucgOyEkFTTC1F', 'https://lh3.googleusercontent.com/u/0/d/1-B9S4RFV4P0DNPlsX2jQiAXIXx_MK-GJ', 'https://lh3.googleusercontent.com/u/0/d/1hOCJ9Z1fYQo8LicNss2Abau-MqidsK4l', 'https://lh3.googleusercontent.com/u/0/d/1OVrV43uy8yZ2FZxmv3TRoOKZ-ZG4xdzw', 'https://lh3.googleusercontent.com/u/0/d/1fBawM6g1SaGnnuWOUk_fBao9fns_cSKa', 'https://lh3.googleusercontent.com/u/0/d/1-i2N8insCuGeylnA6GgqLRN8wytfTm6w', 'https://lh3.googleusercontent.com/u/0/d/1eURQwoRHa8u7VTdwVw6OrKeLcrOagafa', 'https://lh3.googleusercontent.com/u/0/d/1BXmWjdTviA46d6TAaSxX2H35FrQnf8Wy', 'https://lh3.googleusercontent.com/u/0/d/18zop8c0VGUyWvyIa0gYytAvecGh6YRMF', 'https://lh3.googleusercontent.com/u/0/d/14hNuf6QznHM5zrCff34I4nYfjZfDH3RO', 'https://lh3.googleusercontent.com/u/0/d/1s_UarE9fZx-RQBzmXl23eRq1eye7tvY1', 'https://lh3.googleusercontent.com/u/0/d/1L6v2XGryiWhEVgAGWN9RuLp5ghzdcnuu', 'https://lh3.googleusercontent.com/u/0/d/1ulyoXeDUDBFrYO8pAPPGk9_JuJd77ZAl', 'https://lh3.googleusercontent.com/u/0/d/1xPyMxehHOTZ2cbOohNkmrNkYvjm3sb_0', 'https://lh3.googleusercontent.com/u/0/d/1Ket0RZRoCaU1qdTy2vOThCa5T0OjMuyI', 'https://lh3.googleusercontent.com/u/0/d/1TJeQ0igEiAGUIVFRXLnkdZtnNyX__yVX', 'https://lh3.googleusercontent.com/u/0/d/10CcRcNOmYgugt68c12jFZCOFMZFhXIvf', 'https://lh3.googleusercontent.com/u/0/d/1Tf81qhIN0tWUM4QzmFVlc5pRZmqX-MN1', 'https://lh3.googleusercontent.com/u/0/d/1uS7plKYd12UK6WuBEya43l5E9tT2lhdg'])">
+                <div class="img-container">
+                    <span class="badge">21 Masterpieces</span>
+                    <img src="https://lh3.googleusercontent.com/u/0/d/1FD9aWVnpfHrmqt179CgSeMxryJyWGv0e" alt="Dining Room">
+                </div>
+                <div class="card-details">
+                    <h3>Dining Room</h3>
+                    <p>Exquisite mastercrafted dining tables and premium chairs designed for high-end interior entertainment spaces.</p>
+                    <span class="view-gallery-btn">View Portfolio →</span>
+                </div>
+            </div>
+
+            <!-- BedRoom -->
+            <div class="product-card" data-aos="zoom-in" data-aos-delay="200" onclick="openGallery('BedRoom Collection', ['https://lh3.googleusercontent.com/u/0/d/1sRn3pPN3xkTcNEKxrTAk_nL7hyan_XnI', 'https://lh3.googleusercontent.com/u/0/d/1XAfzwe8NQnz9WMdJ311zBX9siEqM1pAC', 'https://lh3.googleusercontent.com/u/0/d/10kjCNK6CyoVfCjra7Xy6NBh0Y-EHg6Mw', 'https://lh3.googleusercontent.com/u/0/d/1JGHv6aT62Hj8bb81Pa6AcJRcOYLdCtiu', 'https://lh3.googleusercontent.com/u/0/d/1j3pRf5CpRRzTot0Fs28HAting1-28M2j', 'https://lh3.googleusercontent.com/u/0/d/1ik3rn8coO4gLmJo9qAFPxmYdypuX3nEM', 'https://lh3.googleusercontent.com/u/0/d/1aMSxMGk7gcLoHSwKJ69ojHOuB2jZxubH', 'https://lh3.googleusercontent.com/u/0/d/1PG4iybTUWeuJS1ALDAzGJoKE9N0Uq0ZQ', 'https://lh3.googleusercontent.com/u/0/d/1EcEXu_ZDBBd7zLs0DlSGhg8bhO3uYGO6', 'https://lh3.googleusercontent.com/u/0/d/1w19mz7suU5mC2nvIM1Aytql-sC8Spmge', 'https://lh3.googleusercontent.com/u/0/d/102altxQVaCztJhqzCOC421frlXNThgwo', 'https://lh3.googleusercontent.com/u/0/d/1pEI0KF71epkX0N91FEt7FTb-d72xy4eu', 'https://lh3.googleusercontent.com/u/0/d/1KaHvNiXxV6bIs8cNOyPnLllu79HtR6OC', 'https://lh3.googleusercontent.com/u/0/d/1dA6eZzZZ1RM2wWm7d5SFi80SK8H6JTwW', 'https://lh3.googleusercontent.com/u/0/d/1SwPFq7I3V9tg3qVQNnbwGXJrGUdARJjU', 'https://lh3.googleusercontent.com/u/0/d/1LlLTQMQXR8nmphDTP0pKw8LFLuWJwM7K', 'https://lh3.googleusercontent.com/u/0/d/1GFzSDInYNBO-jsYCbsECTe7O49He8IO4', 'https://lh3.googleusercontent.com/u/0/d/12rxoiJSpzDko04sWfhIuiJNzxi-69ofz', 'https://lh3.googleusercontent.com/u/0/d/1bB2ctySJqM1_0no7BpxipFPWvfi-d-tA', 'https://lh3.googleusercontent.com/u/0/d/1iq4zR__2_d04uywNnHBR7MQlaOBw5bmi', 'https://lh3.googleusercontent.com/u/0/d/1ibnCcByOchWuWJva8kx8NxnG-mM-PfFV', 'https://lh3.googleusercontent.com/u/0/d/13mB5UGYDe1UrN7FZgRMKZcHy5YLjq8oa', 'https://lh3.googleusercontent.com/u/0/d/1jftaVASjh8PipIBe90mLlmCokECMqUKc', 'https://lh3.googleusercontent.com/u/0/d/1nne9Vaxv-3_N2jGPAQHu5lG1fOAZGIS8', 'https://lh3.googleusercontent.com/u/0/d/14aurhLlaMi5sywwkgIwr-Xlt8DGnEQmT', 'https://lh3.googleusercontent.com/u/0/d/1G_EDAxH4sPq_7sTQzPHAD2Asg073v4_y', 'https://lh3.googleusercontent.com/u/0/d/1m_ofihb5V8kKWPrBvw360dthjEoin1Sp', 'https://lh3.googleusercontent.com/u/0/d/1yR8wbXFbbGu4eeEwSiX_6ijVDTpbhHz7', 'https://lh3.googleusercontent.com/u/0/d/1j9_pTJVZ6TJ-M4s2mqSF8_NEDHyQKdyq', 'https://lh3.googleusercontent.com/u/0/d/1NTnxAGAmotFkmIRtO3TAkAHgeZymMiS4', 'https://lh3.googleusercontent.com/u/0/d/1m5s9RBS7gNV8_PeXZ6Z1ZqTxiAKdGDGO', 'https://lh3.googleusercontent.com/u/0/d/1urUS2cURkA6uBGug3xiKSGl_dSU7NOuD', 'https://lh3.googleusercontent.com/u/0/d/1GgmxZmGzilSHURWrIYOlpZS71l0gE07a', 'https://lh3.googleusercontent.com/u/0/d/1cYrsP1nchXihYj4wLnI5XUzKUxWmscf3', 'https://lh3.googleusercontent.com/u/0/d/1PQZyEvt-aQHJZV_3JfiVpIlIOyR0aoyn', 'https://lh3.googleusercontent.com/u/0/d/1vE-uMSgnBawTMOwZlxpMPCA5zPnrH7GD', 'https://lh3.googleusercontent.com/u/0/d/1C8L63mO1zNAXt4Ebmh_umWnMPVFTwUhS', 'https://lh3.googleusercontent.com/u/0/d/1kAvcKz-zLWgg2ixvJ-m_7uL0Y-OfkpxF', 'https://lh3.googleusercontent.com/u/0/d/124WpcO-RXNC5jWGWlUzLImzGXwt3Y4VQ', 'https://lh3.googleusercontent.com/u/0/d/1LiXoLLUnwa32K6Yd3z7WnMq7b4fJNwbs', 'https://lh3.googleusercontent.com/u/0/d/1F5HPbAoybcLVHmpfAM5XWl3gqTWz-idD', 'https://lh3.googleusercontent.com/u/0/d/1FJgr1EhZIqtwJs1a8W5SHbh9nxuAXeOJ', 'https://lh3.googleusercontent.com/u/0/d/1rRV8_EKdfJKve8AMwl7xWDZ3sbMrVejd', 'https://lh3.googleusercontent.com/u/0/d/1I8liXPK9987mkqhFD6j5l1EpTA2_mEG8', 'https://lh3.googleusercontent.com/u/0/d/1tBKbZv8aJuJU_tGyoJ4wyKzi-jB1BKT0', 'https://lh3.googleusercontent.com/u/0/d/1zMBT29A7Tt_-kgmDn4-w5iOu_Uk9vEen', 'https://lh3.googleusercontent.com/u/0/d/1ZtaluMwwc40dkDQ9JijSenV6oD7enG_l', 'https://lh3.googleusercontent.com/u/0/d/1YrbmRG3rlzbZUVr1qIGtcankrD3mOseC', 'https://lh3.googleusercontent.com/u/0/d/1aKck6FIVPfdQOI1gh5S6cIomQ-Wf7hEc', 'https://lh3.googleusercontent.com/u/0/d/1JSZk4xU6lCcMYPZOvo71vRWgvrFQV4uV'])">
+                <div class="img-container">
+                    <span class="badge">50 Masterpieces</span>
+                    <img src="https://lh3.googleusercontent.com/u/0/d/1sRn3pPN3xkTcNEKxrTAk_nL7hyan_XnI" alt="BedRoom">
+                </div>
+                <div class="card-details">
+                    <h3>Bedroom</h3>
+                    <p>Elite bespoke beds and private concepts manufactured to reflect tranquility and absolute elegance for your personal retreat.</p>
+                    <span class="view-gallery-btn">View Portfolio →</span>
+                </div>
+            </div>
+
+            <!-- Outdoor -->
+            <div class="product-card" data-aos="zoom-in" onclick="openGallery('Outdoor Full Collections', ['https://lh3.googleusercontent.com/u/0/d/1w1r4ogmtr1KJW9WiANK9ojQLJtWK3j3N', 'https://lh3.googleusercontent.com/u/0/d/1saxDIf9tQvSD2cASOjFtvmpRmoc1-Qs-', 'https://lh3.googleusercontent.com/u/0/d/1klDnvnePSBHFnsuezkpsyWdt9-KyhM7u', 'https://lh3.googleusercontent.com/u/0/d/1bUyhfrlCnsa5GDvhh9ht4FMFikiJjoSY', 'https://lh3.googleusercontent.com/u/0/d/1Of9ToMft_EEneY1NUq8ao9mVLZrBTGC9', 'https://lh3.googleusercontent.com/u/0/d/1uojWxwREk3kTR-dTx1UIuHegh0YWEgQk', 'https://lh3.googleusercontent.com/u/0/d/1lY7Wp7YovZfb9YsftZ__T30HcSJ_rLL', 'https://lh3.googleusercontent.com/u/0/d/1GczrEUHsjyW5qCQVe-H2nxZgpNIs6BpR', 'https://lh3.googleusercontent.com/u/0/d/1icbIuqvhKBvAH0Hpt-jtr8KZ0sh-nLWC', 'https://lh3.googleusercontent.com/u/0/d/1wsg4O62R4ymGh1KFDjGhfrE2arFKfcU8', 'https://lh3.googleusercontent.com/u/0/d/1yIOj2VaU5BTokIwJINQHT6XC1cDTWWLh', 'https://lh3.googleusercontent.com/u/0/d/1NAZlQMoEa6RcaJTSemLan1vWNgasvrEZ', 'https://lh3.googleusercontent.com/u/0/d/14TsZlfo8OpZIzKsJem51cQ7YKGc6ybMi', 'https://lh3.googleusercontent.com/u/0/d/1Hd_wp4ff4mn1IF25MIFf1qy_tVbPG2wJ', 'https://lh3.googleusercontent.com/u/0/d/1BUA3nDy9JN7sK-DAqJWIh_Yqs31ZTGEP', 'https://lh3.googleusercontent.com/u/0/d/16skVZCi7s3ltWJmwy212ggoilFsHRkmO', 'https://lh3.googleusercontent.com/u/0/d/1vehDsXr6BnWiNa3ZtUXenn_PqcJoPUrL', 'https://lh3.googleusercontent.com/u/0/d/1hG4MddxsBv-C9FS3CY3WIe8WyauQwRv-', 'https://lh3.googleusercontent.com/u/0/d/1N1vFOl_M2b5sYefdEsWQf_qrgSNmG6J1'])">
+                <div class="img-container">
+                    <span class="badge">19 Masterpieces</span>
+                    <img src="https://lh3.googleusercontent.com/u/0/d/1w1r4ogmtr1KJW9WiANK9ojQLJtWK3j3N" alt="Outdoor Full Sets">
+                </div>
+                <div class="card-details">
+                    <h3>Outdoor Living</h3>
+                    <p>Luxury outdoor seating and lounge sets engineered to endure extreme weather conditions without compromising on style.</p>
+                    <span class="view-gallery-btn">View Portfolio →</span>
+                </div>
+            </div>
+
+            <!-- Fountain -->
+            <div class="product-card" data-aos="zoom-in" data-aos-delay="100" onclick="openGallery('Fountains & Cascades Collection', ['https://lh3.googleusercontent.com/u/0/d/1ciprSdH34TxIroKRl9HGhY-qMDoNDA-l', 'https://lh3.googleusercontent.com/u/0/d/1kDGA-r9r0d0baixzx7oYG3mLOfMDS3OX', 'https://lh3.googleusercontent.com/u/0/d/1L06_rhRYlUT3ayhAViT32ynnFen5ccJ3', 'https://lh3.googleusercontent.com/u/0/d/1wzFQumKe8DvR12dvzOK_TE5-ap3eRveL', 'https://lh3.googleusercontent.com/u/0/d/1orjB6LWt76UD96NIvokzk_3jsdDhMcca', 'https://lh3.googleusercontent.com/u/0/d/1aJsO8jHuKogDFiKu1RxPG8C6f65XGg4B', 'https://lh3.googleusercontent.com/u/0/d/1hN5eJtR_l2mTZjQX8t3R_Z3M9BzuYOkb', 'https://lh3.googleusercontent.com/u/0/d/1Zoock8AbeVQYVfL1WbpM0ogSwkEVDzjC', 'https://lh3.googleusercontent.com/u/0/d/1Ii3P-lp04HPsMLawaf3p_Zby3x9wFzP9', 'https://lh3.googleusercontent.com/u/0/d/1Bg9i_qmlbPauFr4cWAHl3WV8q3-zjD3c', 'https://lh3.googleusercontent.com/u/0/d/1jUD80QS9_VHU1A7aD5EAAoAHx0Q85cR5', 'https://lh3.googleusercontent.com/u/0/d/1WPSRKSts9KlW1GJP9z-H2Cb4tOikLoaq', 'https://lh3.googleusercontent.com/u/0/d/1W5WWWTpMtY1qOvk_YgyDlIYplrzIrory', 'https://lh3.googleusercontent.com/u/0/d/1-GsX8PYFnR06v6Co7OckEWFvy9Ve2OLj', 'https://lh3.googleusercontent.com/u/0/d/1_3vM0HUZQR9ShNddUz8efM7fwD664sfx', 'https://lh3.googleusercontent.com/u/0/d/1ggoux2jsqguu3BeazFA4RFWlXzsAZeUB', 'https://lh3.googleusercontent.com/u/0/d/1qrkEl5bfpMTdaHwG4SOMnd7YYbXb1tGf', 'https://lh3.googleusercontent.com/u/0/d/1bp5UUSX3VwkB1pJOypfvjzG7f-0Aua--', 'https://lh3.googleusercontent.com/u/0/d/1hk3zQiAotxhiPrAfbEDh4LWuqoIf3vca', 'https://lh3.googleusercontent.com/u/0/d/1A1qI28CKtetHNv0R9h8ixbGPsjQ-_7OQ', 'https://lh3.googleusercontent.com/u/0/d/1XM52sr5IgUxvo5yLH6jmwBqOFyKAH5se', 'https://lh3.googleusercontent.com/u/0/d/1SveOW78xZzMb0FUFwhq7Mg-0xNbmA-Bw', 'https://lh3.googleusercontent.com/u/0/d/1GSlKoeVto_bonxELFV91bciQdpPWXHk7', 'https://lh3.googleusercontent.com/u/0/d/1ewNXhz49V4z2gfUCWNjS-ZMxvieQEVhn'])">
+                <div class="img-container">
+                    <span class="badge">24 Masterpieces</span>
+                    <img src="https://lh3.googleusercontent.com/u/0/d/1ciprSdH34TxIroKRl9HGhY-qMDoNDA-l" alt="Fountains">
+                </div>
+                <div class="card-details">
+                    <h3>Water Features</h3>
+                    <p>Architectural fountains and luxury cascades crafted from natural stone to create a serene auditory and visual experience.</p>
+                    <span class="view-gallery-btn">View Portfolio →</span>
+                </div>
+            </div>
+
+            <!-- Landscape -->
+            <div class="product-card" data-aos="zoom-in" data-aos-delay="200" onclick="openGallery('Landscape Design Portfolio', ['https://lh3.googleusercontent.com/u/0/d/1DMp3sKx9fBJlXq0KmDGJd3g5tHMaeD4l', 'https://lh3.googleusercontent.com/u/0/d/1kDi9F7vxibZUD0xlrZUg5lwTHlxjv2u_', 'https://lh3.googleusercontent.com/u/0/d/1aowP35BIysMMXLYi6iLBrTaIJIQ10e-j', 'https://lh3.googleusercontent.com/u/0/d/1dBnx0P90d1FxjiynGlOuYcQmDpeGKVVZ', 'https://lh3.googleusercontent.com/u/0/d/1Wfi9R0e49ZVw0eLrYDBE656MoL1bJd_Z', 'https://lh3.googleusercontent.com/u/0/d/1NjV-rwoRH82prvlmNmkg6rfvXQBfXJSL', 'https://lh3.googleusercontent.com/u/0/d/18E7kZwY_Mt469aGkcxl7tPju-9rBF6Jr', 'https://lh3.googleusercontent.com/u/0/d/1tryo-rVEwT7HPJenqy4cirx_iQzQ6Tb9', 'https://lh3.googleusercontent.com/u/0/d/1qi4aBmm1Yxui_biCRDbjUdkiBp9NXn1C', 'https://lh3.googleusercontent.com/u/0/d/1i9T8efHuIh6j-y-20uC7hLiMkTFzbtpM'])">
+                <div class="img-container">
+                    <span class="badge">10 Masterpieces</span>
+                    <img src="https://lh3.googleusercontent.com/u/0/d/1DMp3sKx9fBJlXq0KmDGJd3g5tHMaeD4l" alt="Landscape Design">
+                </div>
+                <div class="card-details">
+                    <h3>Landscape Design</h3>
+                    <p>Comprehensive landscape planning and execution, integrating premium greenery and luxury hardscape for villas and compounds.</p>
+                    <span class="view-gallery-btn">View Portfolio →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="gallery-popup" id="galleryPopup" onclick="checkOutsideClick(event)">
+        <div class="popup-wrapper" onclick="event.stopPropagation()">
+            <span class="close-popup" onclick="closeGallery()">&times;</span>
+            <div class="popup-title" id="popupTitle">Collection Portfolio</div>
+            <div class="slides-container" id="popupSlides"></div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>Lynnwood</h2>
+                <p>Elevating the art of living through bespoke design and timeless craftsmanship.</p>
+                <div class="social-media-row">
+                    <a href="https://www.facebook.com/share/1J8fy8xMzJ/" target="_blank" class="sm-icon fb"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/lynnwood.eg?igsh=MXIzOGY3aW5hNmtwaA==" target="_blank" class="sm-icon ig"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Get In Touch</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Heliopolis, Cairo, Egypt</p>
+                <p><i class="fa-solid fa-phone"></i> +20 104 056 7124</p>
+                <p><i class="fa-solid fa-envelope"></i> info@lynnwoodeg.com</p>
+            </div>
+
+            <div class="footer-social">
+                <h3>Quick Connect</h3>
+                <a href="https://wa.me/201040567124" target="_blank" class="wa-inline-btn">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Inquiry
+                </a>
+                <a href="https://drive.google.com/file/d/1WfVqo4jX7KTY-PUcWw6bfCmMbC4CqdrA/view" target="_blank" class="catalog-inline-btn">
+                    <i class="fa-solid fa-book-open"></i> Download Catalog
+                </a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Lynnwood Furniture & Landscape Architecture. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        function openGallery(title, images) {
+            const popup = document.getElementById('galleryPopup');
+            const popupTitle = document.getElementById('popupTitle');
+            const popupSlides = document.getElementById('popupSlides');
+            
+            popupTitle.innerText = title;
+            popupSlides.innerHTML = '';
+            
+            images.forEach(imgSrc => {
+                const img = document.createElement('img');
+                img.src = imgSrc;
+                img.loading = 'lazy';
+                popupSlides.appendChild(img);
+            });
+            
+            popup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGallery() {
+            document.getElementById('galleryPopup').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function checkOutsideClick(e) {
+            if (e.target.id === 'galleryPopup') closeGallery();
+        }
+    </script>
+</body>
+</html>
